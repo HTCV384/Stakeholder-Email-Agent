@@ -50,7 +50,7 @@ function normalizeKey(relKey: string): string {
 }
 
 function toFormData(
-  data: Buffer | Uint8Array | string,
+  data: Uint8Array | string,
   contentType: string,
   fileName: string
 ): FormData {
@@ -69,7 +69,7 @@ function buildAuthHeaders(apiKey: string): HeadersInit {
 
 export async function storagePut(
   relKey: string,
-  data: Buffer | Uint8Array | string,
+  data: Uint8Array | string,
   contentType = "application/octet-stream"
 ): Promise<{ key: string; url: string }> {
   const { baseUrl, apiKey } = getStorageConfig();

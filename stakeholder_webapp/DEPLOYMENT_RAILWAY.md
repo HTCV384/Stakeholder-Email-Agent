@@ -223,7 +223,7 @@ Create a `railway.json` file in your project root:
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pnpm install && pnpm db:push && pnpm build"
+    "buildCommand": "pnpm install && pnpm db:migrate && pnpm build"
   },
   "deploy": {
     "startCommand": "pnpm start",
@@ -249,7 +249,8 @@ Ensure your `package.json` includes:
     "build:client": "cd client && vite build",
     "build:server": "tsc --project server/tsconfig.json",
     "start": "node dist/server/index.js",
-    "db:push": "drizzle-kit generate && drizzle-kit migrate"
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   }
 }
 ```
@@ -368,6 +369,8 @@ Railway automatically provisions SSL certificates. This takes 5-10 minutes after
 
 ## Step 8: Set Up Python Environment
 
+**Note on Python Agent:** For simplicity, this guide runs the Python agent as a child process of the Node.js server. For improved scalability and independent management in a production environment, consider deploying the Python agent as a separate worker service on Railway. This would involve creating a `Procfile` and using a message queue (like Redis) for communication between the services.
+
 ### 8.1 Create `requirements.txt`
 
 Railway auto-detects Python dependencies. Create `requirements.txt` in your project root:
@@ -467,38 +470,7 @@ railway variables set AWS_S3_BUCKET=stakeholder-reports-prod
 railway variables set AWS_S3_REGION=us-east-1
 ```
 
-### Option B: Railway Volumes
 
-Railway provides persistent storage volumes:
-
-```bash
-railway volume add
-```
-
-Configure volume mount point: `/app/uploads`
-
-Update your file storage code:
-
-```typescript
-// server/storage.ts
-import fs from 'fs/promises';
-import path from 'path';
-
-const UPLOAD_DIR = process.env.RAILWAY_VOLUME_MOUNT_PATH || '/app/uploads';
-
-export async function storagePut(key: string, data: Buffer, contentType: string) {
-  const filePath = path.join(UPLOAD_DIR, key);
-  await fs.mkdir(path.dirname(filePath), { recursive: true });
-  await fs.writeFile(filePath, data);
-  
-  return {
-    key,
-    url: `/uploads/${key}`
-  };
-}
-```
-
-**Note:** Volumes are better for development. For production, use S3 for scalability.
 
 ---
 

@@ -17,14 +17,13 @@ RUN apk add --no-cache \
     && ln -sf python3 /usr/bin/python
 
 # Copy package files for dependency resolution
-COPY stakeholder_webapp/package.json stakeholder_webapp/package-lock.json* ./
+COPY package.json package-lock.json* ./
 
 # Install dependencies with exact versions (including dev dependencies)
 RUN npm install
 
 # Copy source code with proper context
-# Railway builds from repo root, so copy from stakeholder_webapp subdirectory
-COPY stakeholder_webapp/ .
+COPY . .
 
 # Set build environment
 ENV NODE_ENV=production

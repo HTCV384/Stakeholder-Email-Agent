@@ -32,6 +32,8 @@ ENV PORT=3000
 
 # Debug: List files to verify what's copied
 RUN echo "=== DEBUG: Files in /app ===" && find /app -type f -name "*.ts" -o -name "*.tsx" | head -20
+RUN echo "=== DEBUG: Client directory structure ===" && find /app/client -type f -name "*.ts" -o -name "*.tsx" || echo "No client TS files"
+RUN echo "=== DEBUG: All files in client/src ===" && ls -la /app/client/src/ || echo "client/src doesn't exist"
 RUN echo "=== DEBUG: Client lib directory ===" && ls -la /app/client/src/lib/ || echo "Directory doesn't exist"
 RUN echo "=== DEBUG: trpc.ts file check ===" && ls -la /app/client/src/lib/trpc* || echo "No trpc files found"
 

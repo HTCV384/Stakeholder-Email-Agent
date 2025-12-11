@@ -1,0 +1,35 @@
+graph TD
+    subgraph "User Interaction Layer"
+        A[User provides research report and email style] --> B{Orchestrator Agent};
+        B --> C[Presents stakeholders for user selection];
+        C --> D{User selects stakeholders};
+        D --> B;
+        B --> E[Presents final generated emails for review];
+    end
+
+    subgraph "Agent Execution Layer"
+        B -- "Selected stakeholders & context" --> F{Task Planner Agent};
+        F -- "Creates & dispatches parallel tasks" --> G((Email Writer Agent 1));
+        F -- "Creates & dispatches parallel tasks" --> H((Email Writer Agent 2));
+        F -- "Creates & dispatches parallel tasks" --> I((...));
+        F -- "Creates & dispatches parallel tasks" --> J((Email Writer Agent N));
+
+        subgraph "Concurrent Email Generation"
+            G -- "Generates email 1" --> K{Quality Review Agent};
+            H -- "Generates email 2" --> K;
+            I -- "..." --> K;
+            J -- "Generates email N" --> K;
+        end
+
+        K -- "Aggregated & reviewed emails" --> B;
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style F fill:#ccf,stroke:#333,stroke-width:2px
+    style K fill:#ccf,stroke:#333,stroke-width:2px
+    style G fill:#cfc,stroke:#333,stroke-width:2px
+    style H fill:#cfc,stroke:#333,stroke-width:2px
+    style I fill:#cfc,stroke:#333,stroke-width:2px
+    style J fill:#cfc,stroke:#333,stroke-width:2px

@@ -1,0 +1,25 @@
+{
+  "query": "SELECT id, name, isDefault FROM emailTemplates ORDER BY id DESC LIMIT 3",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, name, isDefault FROM emailTemplates ORDER BY id DESC LIMIT 3",
+  "rows": [
+    {
+      "id": "60002",
+      "name": "Casual Insider Approach",
+      "isDefault": "1"
+    },
+    {
+      "id": "30002",
+      "name": "Tech Bro Reality Check",
+      "isDefault": "1"
+    },
+    {
+      "id": "30001",
+      "name": "tech bro",
+      "isDefault": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tisDefault\n60002\tCasual Insider Approach\t1\n30002\tTech Bro Reality Check\t1\n30001\ttech bro\t0\n",
+  "stderr": "",
+  "execution_time_ms": 66
+}

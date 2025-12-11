@@ -1,0 +1,58 @@
+{
+  "query": "SELECT id, name, isDefault, userId FROM emailTemplates ORDER BY id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, name, isDefault, userId FROM emailTemplates ORDER BY id",
+  "rows": [
+    {
+      "id": "3",
+      "name": "Problem-Solution Approach",
+      "isDefault": "1",
+      "userId": "0"
+    },
+    {
+      "id": "4",
+      "name": "Case Study Approach",
+      "isDefault": "1",
+      "userId": "0"
+    },
+    {
+      "id": "5",
+      "name": "Partnership Proposal",
+      "isDefault": "1",
+      "userId": "0"
+    },
+    {
+      "id": "6",
+      "name": "Product Introduction",
+      "isDefault": "1",
+      "userId": "0"
+    },
+    {
+      "id": "7",
+      "name": "Follow-up / Re-engagement",
+      "isDefault": "1",
+      "userId": "0"
+    },
+    {
+      "id": "30001",
+      "name": "tech bro",
+      "isDefault": "0",
+      "userId": "1"
+    },
+    {
+      "id": "30002",
+      "name": "Tech Bro Reality Check",
+      "isDefault": "1",
+      "userId": "0"
+    },
+    {
+      "id": "60001",
+      "name": "Casual Insider Approach",
+      "isDefault": "1",
+      "userId": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tisDefault\tuserId\n3\tProblem-Solution Approach\t1\t0\n4\tCase Study Approach\t1\t0\n5\tPartnership Proposal\t1\t0\n6\tProduct Introduction\t1\t0\n7\tFollow-up / Re-engagement\t1\t0\n30001\ttech bro\t0\t1\n30002\tTech Bro Reality Check\t1\t0\n60001\tCasual Insider Approach\t1\t0\n",
+  "stderr": "",
+  "execution_time_ms": 49
+}

@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, reportFilename, reportUrl, status FROM workflows WHERE reportUrl IS NOT NULL ORDER BY id DESC LIMIT 1",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, reportFilename, reportUrl, status FROM workflows WHERE reportUrl IS NOT NULL ORDER BY id DESC LIMIT 1",
+  "rows": [
+    {
+      "id": "30003",
+      "reportFilename": "Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf",
+      "reportUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/0e804ea99085bf7d-Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf",
+      "status": "failed"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\treportFilename\treportUrl\tstatus\n30003\tStrategic Sales Report_ MedStar Franklin Square Medical Center.pdf\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/0e804ea99085bf7d-Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf\tfailed\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

@@ -1,0 +1,31 @@
+{
+  "query": "SELECT id, reportFilename, reportUrl, status, createdAt FROM workflows ORDER BY id DESC LIMIT 3",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, reportFilename, reportUrl, status, createdAt FROM workflows ORDER BY id DESC LIMIT 3",
+  "rows": [
+    {
+      "id": "30003",
+      "reportFilename": "Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf",
+      "reportUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/0e804ea99085bf7d-Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf",
+      "status": "failed",
+      "createdAt": "2025-12-11 00:53:35"
+    },
+    {
+      "id": "30002",
+      "reportFilename": "Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf",
+      "reportUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/91ee67c350b9c298-Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf",
+      "status": "failed",
+      "createdAt": "2025-12-11 00:50:35"
+    },
+    {
+      "id": "30001",
+      "reportFilename": "Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf",
+      "reportUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/1a32fdecf8d671c9-Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf",
+      "status": "failed",
+      "createdAt": "2025-12-11 00:50:18"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\treportFilename\treportUrl\tstatus\tcreatedAt\n30003\tStrategic Sales Report_ MedStar Franklin Square Medical Center.pdf\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/0e804ea99085bf7d-Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf\tfailed\t2025-12-11 00:53:35\n30002\tStrategic Sales Report_ MedStar Franklin Square Medical Center.pdf\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/91ee67c350b9c298-Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf\tfailed\t2025-12-11 00:50:35\n30001\tStrategic Sales Report_ MedStar Franklin Square Medical Center.pdf\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/1a32fdecf8d671c9-Strategic Sales Report_ MedStar Franklin Square Medical Center.pdf\tfailed\t2025-12-11 00:50:18\n",
+  "stderr": "",
+  "execution_time_ms": 109
+}

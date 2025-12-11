@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, name, title, details FROM stakeholders WHERE workflowId = 150001 LIMIT 1",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, name, title, details FROM stakeholders WHERE workflowId = 150001 LIMIT 1",
+  "rows": [
+    {
+      "id": "60001",
+      "name": "Kim Schwenk",
+      "title": "Vice President of Nursing and Chief Nursing Officer",
+      "details": "High influence within the organization, director-level with operational decision-making authority. Responsible for over 1,000 nursing staff and led Magnet re-designation work. Her sepsis priorities include triage/nursing sepsis screening, nursing training and compliance on early identification/bundle delivery, and staffing/retention impacts on response times. She controls nursing protocols, screening workflows, and bedside bundle execution. She is a primary champion for IntelliSep adoption discussions. Conversation starters should focus on balancing faster sepsis detection with nursing workload and how a low-workflow diagnostic fits into staffing and competency plans."
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\ttitle\tdetails\n60001\tKim Schwenk\tVice President of Nursing and Chief Nursing Officer\tHigh influence within the organization, director-level with operational decision-making authority. Responsible for over 1,000 nursing staff and led Magnet re-designation work. Her sepsis priorities include triage/nursing sepsis screening, nursing training and compliance on early identification/bundle delivery, and staffing/retention impacts on response times. She controls nursing protocols, screening workflows, and bedside bundle execution. She is a primary champion for IntelliSep adoption discussions. Conversation starters should focus on balancing faster sepsis detection with nursing workload and how a low-workflow diagnostic fits into staffing and competency plans.\n",
+  "stderr": "",
+  "execution_time_ms": 1011
+}

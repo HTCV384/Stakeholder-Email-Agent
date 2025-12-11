@@ -1,0 +1,14 @@
+{
+  "query": "SELECT id, name FROM emailTemplates WHERE id = 6",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, name FROM emailTemplates WHERE id = 6",
+  "rows": [
+    {
+      "id": "6",
+      "name": "Product Introduction"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\n6\tProduct Introduction\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

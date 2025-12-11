@@ -1,0 +1,28 @@
+# MedStar Franklin Medical Center - Customer Research Report
+
+## Executive Summary
+MedStar Franklin Medical Center is a 200-bed community hospital located in Franklin, Maryland. The facility serves a diverse patient population and is seeking to modernize its healthcare IT infrastructure.
+
+## Key Stakeholders
+
+### Dr. Sarah Johnson - Chief Medical Officer
+Dr. Johnson oversees all clinical operations and is responsible for ensuring quality patient care. She has expressed strong interest in improving clinical decision support systems and reducing medical errors through better technology integration.
+
+### Michael Chen - Chief Information Officer  
+Michael leads the IT department and is driving the digital transformation initiative. He is particularly focused on implementing a new EHR system and improving interoperability between clinical systems.
+
+### Lisa Rodriguez - Director of Nursing
+Lisa manages the nursing staff and is concerned about workflow efficiency and nurse burnout. She is looking for solutions that can reduce administrative burden on nurses and improve patient monitoring capabilities.
+
+### Robert Williams - Chief Financial Officer
+Robert is responsible for the hospital's financial performance. He is interested in solutions that can improve revenue cycle management and reduce operational costs while maintaining quality of care.
+
+## Current Challenges
+- Legacy EHR system with poor usability
+- Lack of integration between clinical systems
+- High administrative burden on clinical staff
+- Rising operational costs
+- Need for better data analytics capabilities
+
+## Budget and Timeline
+The hospital has allocated $5M for technology improvements over the next 18 months. They are looking to start with a pilot program in Q2 2025.

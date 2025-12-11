@@ -1,0 +1,35 @@
+{
+  "query": "SELECT name, title, details FROM stakeholders WHERE workflowId = (SELECT MAX(id) FROM workflows) LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT name, title, details FROM stakeholders WHERE workflowId = (SELECT MAX(id) FROM workflows) LIMIT 10",
+  "rows": [
+    {
+      "name": "Sarah Miller",
+      "title": "Director of Customer Experience",
+      "details": "Responsible for overseeing all aspects of the customer journey, from initial contact to post-purchase support. Her focus is on improving customer satisfaction and retention through enhanced service delivery and personalized interactions. She is particularly interested in data-driven insights to optimize CX strategies."
+    },
+    {
+      "name": "David Chen",
+      "title": "Head of Product Development",
+      "details": "Leads the product development team, focusing on innovation and aligning product features with customer needs and market trends. He is keen on understanding customer pain points directly to inform future product roadmaps and prioritize new features that address user feedback. He values solutions that offer clear ROI and competitive differentiation."
+    },
+    {
+      "name": "Maria Rodriguez",
+      "title": "Chief Marketing Officer (CMO)",
+      "details": "Oversees all marketing initiatives, including brand strategy, digital campaigns, and customer acquisition. Her primary goal is to increase brand awareness and drive customer engagement. She is interested in understanding how customer feedback can be leveraged in marketing messaging and how new technologies can enhance marketing effectiveness and personalization."
+    },
+    {
+      "name": "James Thompson",
+      "title": "VP of Sales",
+      "details": "Manages the sales team and is responsible for revenue generation and market share growth. He is highly focused on understanding customer needs to close deals and identify upsell opportunities. He would be interested in solutions that provide sales enablement tools, improve lead quality, and shorten sales cycles."
+    },
+    {
+      "name": "Emily White",
+      "title": "Customer Support Manager",
+      "details": "Manages the day-to-day operations of the customer support team. Her key responsibilities include ensuring efficient resolution of customer issues, training support staff, and implementing tools to improve support efficiency and customer satisfaction. She is particularly interested in solutions that reduce ticket volume, improve first-contact resolution, and provide better insights into common customer problems."
+    }
+  ],
+  "messages": [],
+  "stdout": "name\ttitle\tdetails\nSarah Miller\tDirector of Customer Experience\tResponsible for overseeing all aspects of the customer journey, from initial contact to post-purchase support. Her focus is on improving customer satisfaction and retention through enhanced service delivery and personalized interactions. She is particularly interested in data-driven insights to optimize CX strategies.\nDavid Chen\tHead of Product Development\tLeads the product development team, focusing on innovation and aligning product features with customer needs and market trends. He is keen on understanding customer pain points directly to inform future product roadmaps and prioritize new features that address user feedback. He values solutions that offer clear ROI and competitive differentiation.\nMaria Rodriguez\tChief Marketing Officer (CMO)\tOversees all marketing initiatives, including brand strategy, digital campaigns, and customer acquisition. Her primary goal is to increase brand awareness and drive customer engagement. She is interested in understanding how customer feedback can be leveraged in marketing messaging and how new technologies can enhance marketing effectiveness and personalization.\nJames Thompson\tVP of Sales\tManages the sales team and is responsible for revenue generation and market share growth. He is highly focused on understanding customer needs to close deals and identify upsell opportunities. He would be interested in solutions that provide sales enablement tools, improve lead quality, and shorten sales cycles.\nEmily White\tCustomer Support Manager\tManages the day-to-day operations of the customer support team. Her key responsibilities include ensuring efficient resolution of customer issues, training support staff, and implementing tools to improve support efficiency and customer satisfaction. She is particularly interested in solutions that reduce ticket volume, improve first-contact resolution, and provide better insights into common customer problems.\n",
+  "stderr": "",
+  "execution_time_ms": 61
+}

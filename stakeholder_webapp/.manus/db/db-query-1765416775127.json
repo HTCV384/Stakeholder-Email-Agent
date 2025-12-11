@@ -1,0 +1,16 @@
+{
+  "query": "SELECT w.id, w.status, w.reportFilename, COUNT(s.id) as stakeholder_count \nFROM workflows w \nLEFT JOIN stakeholders s ON w.id = s.workflowId \nWHERE w.id = (SELECT MAX(id) FROM workflows)\nGROUP BY w.id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT w.id, w.status, w.reportFilename, COUNT(s.id) as stakeholder_count \nFROM workflows w \nLEFT JOIN stakeholders s ON w.id = s.workflowId \nWHERE w.id = (SELECT MAX(id) FROM workflows)\nGROUP BY w.id",
+  "rows": [
+    {
+      "id": "90001",
+      "status": "failed",
+      "reportFilename": "20251208_102059_medstar-franklin-square_with-GPT-verbatim.html",
+      "stakeholder_count": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tstatus\treportFilename\tstakeholder_count\n90001\tfailed\t20251208_102059_medstar-franklin-square_with-GPT-verbatim.html\t0\n",
+  "stderr": "",
+  "execution_time_ms": 124
+}

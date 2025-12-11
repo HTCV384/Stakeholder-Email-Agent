@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, reportFilename, reportUrl, status FROM workflows ORDER BY id DESC LIMIT 1",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, reportFilename, reportUrl, status FROM workflows ORDER BY id DESC LIMIT 1",
+  "rows": [
+    {
+      "id": "60001",
+      "reportFilename": "20251208_102059_medstar-franklin-square_with-GPT-verbatim.html",
+      "reportUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/bc4894a71818f750-20251208_102059_medstar-franklin-square_with-GPT-verbatim.html",
+      "status": "failed"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\treportFilename\treportUrl\tstatus\n60001\t20251208_102059_medstar-franklin-square_with-GPT-verbatim.html\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663236634916/V5mU5KaxouRWtQ7kmCeQrU/1/reports/bc4894a71818f750-20251208_102059_medstar-franklin-square_with-GPT-verbatim.html\tfailed\n",
+  "stderr": "",
+  "execution_time_ms": 194
+}

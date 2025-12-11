@@ -1,0 +1,13 @@
+{
+  "query": "SELECT id FROM emailTemplates WHERE name = 'Casual Insider Approach'",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id FROM emailTemplates WHERE name = 'Casual Insider Approach'",
+  "rows": [
+    {
+      "id": "60002"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\n60002\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

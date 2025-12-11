@@ -1,0 +1,8 @@
+{
+  "query": "SELECT id, name, description, promptTemplate FROM email_templates WHERE name LIKE '%tech%' OR name LIKE '%bro%' OR description LIKE '%tech%' OR description LIKE '%bro%'",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, name, description, promptTemplate FROM email_templates WHERE name LIKE '%tech%' OR name LIKE '%bro%' OR description LIKE '%tech%' OR description LIKE '%bro%'",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1146 (42S02) at line 1: Table 'v5mu5kaxourwtq7kmceqru.email_templates' doesn't exist"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "query": "SELECT id, name, SUBSTRING(promptTemplate, 1, 500) as prompt_preview FROM emailTemplates WHERE id = 6",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2sFSf5cpMcz3VU3.root --database V5mU5KaxouRWtQ7kmCeQrU --execute SELECT id, name, SUBSTRING(promptTemplate, 1, 500) as prompt_preview FROM emailTemplates WHERE id = 6",
+  "rows": [
+    {
+      "id": "6",
+      "name": "Product Introduction",
+      "prompt_preview": "You are writing a product introduction email to a healthcare stakeholder."
+    }
+  ],
+  "messages": [
+    "**Email Structure:**",
+    "1. Opening: Brief introduction referencing {stakeholder_title} role at {company_name}",
+    "2. Product Overview: Concise explanation of what we offer and why it matters for their role",
+    "3. Specific Value: Connect product benefits to {company_name}'s situation from {relevant_context}",
+    "4. Call to Action: Offer product demo or brief call",
+    "**Tone:** Clear, confident, value-focused",
+    "**Length:** 130-160 words",
+    "**Key R"
+  ],
+  "stdout": "id\tname\tprompt_preview\n6\tProduct Introduction\tYou are writing a product introduction email to a healthcare stakeholder.\n\n**Email Structure:**\n1. Opening: Brief introduction referencing {stakeholder_title} role at {company_name}\n2. Product Overview: Concise explanation of what we offer and why it matters for their role\n3. Specific Value: Connect product benefits to {company_name}'s situation from {relevant_context}\n4. Call to Action: Offer product demo or brief call\n\n**Tone:** Clear, confident, value-focused\n**Length:** 130-160 words\n**Key R\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

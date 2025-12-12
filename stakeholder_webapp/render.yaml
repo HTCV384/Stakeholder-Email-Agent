@@ -1,0 +1,45 @@
+services:
+  # Main web service - serves both API and static React frontend
+  - type: web
+    name: stakeholder-webapp
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run db:generate && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      # Application
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      
+      # Database (you'll set the actual value in Render dashboard)
+      - key: DATABASE_URL
+        sync: false
+      
+      # Authentication (temporary JWT setup - we'll improve this)
+      - key: JWT_SECRET
+        generateValue: true
+      
+      # AI Integration
+      - key: OPENROUTER_API_KEY
+        sync: false
+      
+      # File Storage (if using S3)
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_S3_BUCKET
+        sync: false
+      - key: AWS_S3_REGION
+        value: us-east-1
+      
+      # App Configuration
+      - key: VITE_APP_TITLE
+        value: Stakeholder Email Outreach
+      - key: VITE_APP_LOGO
+        value: https://your-logo-url.com/logo.png

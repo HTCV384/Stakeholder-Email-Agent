@@ -40,6 +40,39 @@ async function startServer() {
   app.get("/api/health", (req, res) => {
     res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
   });
+
+  // Simple auth endpoints for Render deployment
+  app.post("/api/login", async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      const { simpleAuth } = await import("./simple-auth");
+      
+      const token = await simpleAuth.loginWithCredentials(email, password);
+      if (!token) {
+        return res.status(401).json({ error: "Invalid credentials" });
+      }
+
+      // Set session cookie
+      const { COOKIE_NAME } = await import("@shared/const");
+      res.cookie(COOKIE_NAME, token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      });
+
+      res.json({ success: true, message: "Logged in successfully" });
+    } catch (error) {
+      console.error("[Login] Error:", error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
+  app.post("/api/logout", (req, res) => {
+    const { COOKIE_NAME } = require("@shared/const");
+    res.clearCookie(COOKIE_NAME);
+    res.json({ success: true, message: "Logged out successfully" });
+  });
   
   // tRPC API
   app.use(

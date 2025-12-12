@@ -1,0 +1,10 @@
+# AI and LLM dependencies
+openai==1.0.0
+requests==2.31.0
+
+# Database connectivity
+pymysql==1.1.0
+cryptography==41.0.0
+
+# Utility libraries
+python-dotenv==1.0.0

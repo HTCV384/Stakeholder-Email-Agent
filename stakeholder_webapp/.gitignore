@@ -105,3 +105,6 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# Explicitly include client lib directory (needed for tRPC)
+!client/src/lib/
